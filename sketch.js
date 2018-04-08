@@ -3,7 +3,7 @@
 class Pendulum {
 
     constructor() {
-        this.length = 100;
+        this.length = 200;
         this.angle = PI/4;
         this.angularAcceleration = 0;
         this.angularVelocity = 0;
@@ -13,7 +13,7 @@ class Pendulum {
     }
 
     update() {
-        this.angularAcceleration = -1 * 9.8 * this.mass * sin(this.angle);
+        this.angularAcceleration = -1 * 9.8 / this.length * sin(this.angle);
         this.angularVelocity += this.angularAcceleration;
         this.angle += this.angularVelocity;
 
